@@ -1,0 +1,11 @@
+{
+  "students": [
+    { "id": "S001", "name": "Rahul Sharma", "class": "10A", "leaveBalance": 10 },
+    { "id": "S002", "name": "Priya Desai", "class": "9B", "leaveBalance": 15 },
+    { "id": "S003", "name": "Ananya Gupta", "class": "11C", "leaveBalance": 10 }
+  ],
+  "leaves": [
+    { "leaveId": "L2001", "studentId": "S001", "from": "2025-09-01", "to": "2025-09-02", "days": 2, "status": "approved" },
+    { "leaveId": "L2002", "studentId": "S002", "from": "2025-09-05", "to": "2025-09-07", "days": 3, "status": "pending" }
+  ]
+}
