@@ -1,5 +1,10 @@
 import fs from "fs";
 import { z } from "zod";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default function registerApproveLeave(server) {
   server.registerTool(
@@ -13,7 +18,7 @@ export default function registerApproveLeave(server) {
       }
     },
     async ({ studentId, leaveId }) => {
-      const file = "./data/mock-data.json";
+      const file = path.join(__dirname, "../data/mock-data.json");
       const data = JSON.parse(fs.readFileSync(file, "utf-8"));
 
       const student = data.students.find((s) => s.id === studentId);

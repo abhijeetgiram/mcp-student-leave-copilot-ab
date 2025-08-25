@@ -1,5 +1,10 @@
 import fs from "fs";
 import { z } from "zod";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default function registerGetStudentDetails(server) {
   server.registerTool(
@@ -10,7 +15,8 @@ export default function registerGetStudentDetails(server) {
       inputSchema: { id: z.string().min(1).describe("Student ID, e.g. S001") },
     },
     async ({ id }) => {
-      const data = JSON.parse(fs.readFileSync("./data/mock-data.json", "utf-8"));
+      const dataPath = path.join(__dirname, "../data/mock-data.json");
+      const data = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
 
       const student = data.students.find((s) => s.id === id);
       if (!student) {
