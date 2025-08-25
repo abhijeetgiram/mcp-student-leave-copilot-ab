@@ -100,3 +100,13 @@ In a Github Copilot chat, just ask things like:
 > pwd
 
 `/Users/abhijeetgiram/Workspace/Personal/mcp-student-leave-copilot-ab`
+
+`/Users/abhijeetgiram/Library/Application Support/Code/User/settings.json`
+
+To create a file on Mac using the command line, use the touch command. For example, to create a file named
+
+> touch mcp.json
+
+You can also create and edit a file using nano:
+
+> nano mcp.json
