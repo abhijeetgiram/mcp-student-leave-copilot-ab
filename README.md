@@ -35,21 +35,21 @@ Student Leave MCP server (stdio) and Github Copilot agent ready!
 
 ### Wire it up in Github Copilot (VS Code)
 
-Github Copilot looks for MCP servers in its settings.json
+Github Copilot looks for MCP servers in its mcp.json
+
+`/Users/abhijeetgiram/Library/Application Support/Code/User/mcp.json`
 
 ```
-"mcpServers": {
-  "mcp-student-leave-copilot-ab": {
-    "command": "node",
-    "args": [
-      "/Users/abhijeetgiram/Workspace/Personal/mcp-student-leave-copilot-ab/server.js"
-    ],
-    "alwaysAllow": [
-      "list_students",
-      "get_student_details",
-      "approve_leave"
-    ],
-    "disabled": false
+{
+  "servers": {
+    "mcp-student-leave-copilot-ab": {
+      "command": "node",
+      "args": [
+        "/Users/abhijeetgiram/Workspace/Personal/mcp-student-leave-copilot-ab/server.js"
+      ],
+      "alwaysAllow": ["list_students", "get_student_details", "approve_leave"],
+      "disabled": false
+    }
   }
 }
 ```
